@@ -16,6 +16,21 @@ Provides methods to spin the roulette wheel and place bets.
 - `bet(spin_result, bet_object)` matches the bet with the result and returns the amount of money won
 - `getColor(spin_result)` returns 'black' | 'red' | null
 
+The bet object description
+```
+const bet_object = {
+    money: wallet.take(100), - the amount to bet
+    color: prevColor,        - 'red' | 'black'
+    number: null,            - 0...36
+    half: null,              - 1...2
+    third: null,             - 1...3
+    thirdVert: null,         - 1...3 (vertically)
+    odd: null,               - true | false
+    // Only one of the bet conditions will be met
+    // You cannot bet on red and the first third at the same time
+}
+```
+
 #### Wallet
 
 Create a wallet and set the initial amount `new Wallet(1000)`
