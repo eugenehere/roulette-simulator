@@ -1,4 +1,4 @@
-# Roulette game simulator
+# Roulette wheel simulator
 
 Node.js version: 20
 
